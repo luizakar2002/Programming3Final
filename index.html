@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="LivingCreature.js"></script>
+    <script src="Grass.js"></script>
+    <script src="GrassEater.js"></script>
+    <script src="Monster.js"></script>
+    <script src="FirstCharacter.js"></script>
+    <script src="SecondCharacter.js"></script>
+	  <script src="script.js"></script>
+	  <style>
+			#legend {position: top;top: 0;right: 0;width: 1800px;} .legend-color {width: 30px;height: 30px;} td {border: 1px solid black; font-size: 14px; padding-left: 5px;}
+		</style>
+</head>
+<body>
+	<table id="legend">
+        <tr>
+            <td class="legend-color">Գույն</td>
+            <td>Անվանում</td>
+            <td>Շարժվում է</td>
+            <td>Ուտում է</td>
+            <td>Բազմանում է</td>
+            <td>Սատկում է</td>
+            <td>Ցատկում է</td>
+            
+        </tr>
+
+        <tr>
+            <td class="legend-color" style="background-color:#F6F6F6"></td>
+            <td>Դատարկ վանդակներ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:#0FAE18"></td>
+            <td>Խոտ</td>
+            <td></td>
+            <td></td>
+            <td>Մոտակա 8 վանդակներում, 3 տակտը մեկ</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:#F3EF76"></td>
+            <td>Խոտակեր</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Խոտերին, մոտակա 8 վանդակներում,
+				շարժվելիս էներգիան ավելանում է 2֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, 
+				երբ էներգիան 8֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:#720EA8"></td>
+            <td>Գիշատիչ(Monster)</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 2֊ով</td>
+            <td>Խոտակերներին, մոտակա 8 վանդակներում, 
+				շարժվելիս էներգիան ավելանում է 3֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, 
+				երբ էներգիան 10֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="legend-color" style="background-color:#DD1313"></td>
+            <td>Առաջին Կերպար(FirstCharacter)</td>
+            <td>Անկյունագծերով, էներգիան քչանում է 2֊ով</td>
+            <td>Ուտում է միանգամից Գիշատիչին և Խոտ, մոտակա անկյունագծերով , 
+				շարժվելիս էներգիան ավելանում է 3֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, 
+				երբ էներգիան 17֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+            <td>Մոտակա 24 վանդակներում Գիշատիչի փոխարեն է կանգնում, 
+				իսկ իր կանգնած տեղում Գիշատիչ է ստեղծում, էներգիան քչանում է 1-ով</td>
+        </tr>
+        
+        <tr>
+            <td class="legend-color" style="background-color:#061ECE"></td>
+            <td>Երկրորդ Կերպար(SecondCharacter)</td>
+            <td>Մոտակա 24 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Ուտում է միանգամից Առաջին Կերպարին և Խոտ, մոտակա 24 վանդակներում,
+				շարժվելիս էներգիան ավելանում է 3֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 23֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
